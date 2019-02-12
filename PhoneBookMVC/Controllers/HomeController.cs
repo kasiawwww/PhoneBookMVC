@@ -1,8 +1,10 @@
-﻿using System;
+﻿using PhoneBookMVC.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace PhoneBookMVC.Controllers
 {
@@ -11,6 +13,15 @@ namespace PhoneBookMVC.Controllers
         public ActionResult Index()
         {
             return View();
+            //return Content("Pierwsza apka");
+            //using (DbEntities db = new DbEntities())
+            //{
+            //    var people = db.Person
+            //        .Include(a=>a.Phones)
+            //        .ToList();
+            //    return View(people);
+
+            //}
         }
 
         public ActionResult About()
